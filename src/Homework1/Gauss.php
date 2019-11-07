@@ -3,7 +3,7 @@
 namespace Homework1;
 
 class Gauss {
-    public function get(int $number): int {
+    public function getWithCycle(int $number): int {
         $sum = 0;
 
         for ($i = $number; $i > 0; $i--) {
@@ -14,15 +14,17 @@ class Gauss {
     }
 
 
-    public function get2(int $number): int {
+    public function getWithFormula(int $number): int {
         return $number * ($number + 1) / 2;
     }
 }
 
 $sum = new Gauss();
 
-var_dump($sum->get(3));
-var_dump($sum->get(100));
+echo "With Cycle:\n";
+var_dump($sum->getWithCycle(3));
+var_dump($sum->getWithCycle(100));
 
-var_dump($sum->get2(3));
-var_dump($sum->get2(100));
+echo "With Formula:\n";
+var_dump($sum->getWithFormula(3));
+var_dump($sum->getWithFormula(100));
