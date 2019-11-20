@@ -1,6 +1,6 @@
 <?php
 
-namespace ReversedStrings;
+namespace Homework1;
 
 class Reversed {
     public function solution(string $string): string {
