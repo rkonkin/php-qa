@@ -3,7 +3,7 @@
 namespace Homework1;
 
 class Brevity {
-    public function cut(string $string): string {
+    public function calculator(string $string): string {
         $wordsArray = explode(" ", $string);
         $surname = $wordsArray[0];
         $restWords = array_slice($wordsArray, 1);
@@ -20,7 +20,7 @@ class Brevity {
 
 $name = new Brevity();
 
-var_dump($name->cut("Konkin Roman Alexandrovich lalalala"));
-var_dump($name->cut("Konkin Roman Alexandrovich"));
-var_dump($name->cut("Konkin Roman"));
-var_dump($name->cut("Konkin"));
+var_dump($name->calculator("Konkin Roman Alexandrovich lalalala"));
+var_dump($name->calculator("Konkin Roman Alexandrovich"));
+var_dump($name->calculator("Konkin Roman"));
+var_dump($name->calculator("Konkin"));
