@@ -3,10 +3,12 @@
 namespace Homework1;
 
 class TicTacToe {
+    private const VALID_CHARACTERS = ['x', 'o'];
+
     private function checkLine(array $line): ?string {
         $unique = array_unique($line);
 
-        if (count($unique) === 1) {
+        if (count($unique) === 1 && in_array($unique[0], self::VALID_CHARACTERS)) {
             return $unique[0];
         }
 
@@ -93,3 +95,9 @@ var_dump($judge->check($boardDiagonalLeftRightWin));
 
 echo '$boardDiagonalRightLeftWin - ';
 var_dump($judge->check($boardDiagonalRightLeftWin));
+
+var_dump($judge->check([
+    ['ц', 'ц', 'ц'],
+    ['o', 'o', 'o'],
+    ['o', 'o', 'o'],
+]));

@@ -4,7 +4,7 @@ namespace Homework1;
 
 class CountIt {
     public function solution(int $digit, int $number): int {
-        return preg_match_all("/$digit/", strval($number));
+        return substr_count($number, $digit);
     }
 }
 

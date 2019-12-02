@@ -3,8 +3,7 @@
 namespace Homework1;
 
 class FizzBuzz {
-    // Как указать тип возврата либо int, либо string ?
-    public function calculator(int $number) {
+    public function calculator(int $number): string {
         if ($number % 3 === 0 && $number % 5 === 0) {
             return 'FizzBuzz';
         }
@@ -18,7 +17,7 @@ class FizzBuzz {
             return 'Buzz';
         }
 
-        return $number;
+        return strval($number);
     }
 }
 
